@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>final</title>
+    <style media="screen">
+      body{
+        background-color: #88be49; /*lovely green*/
+        color:white;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+      }
+      header{
+        text-align: center;
+      }
+      canvas{
+        border:1px solid;
+        position: fixed;
+        padding: 0 auto
+      }
+      .gameCanvas{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+      }
+      .scoreboard{
+        background-color: white;
+      }
+      #scoreBoard01{
+        color:orange;
+        margin:0;
+        padding:0;
+      }
+      #scoreBoard02{
+        color:blue;
+        margin:0;
+        padding:0;
+      }
+    </style>
+  </head>
+  <body id="mainBody">
+    <header>
+      <h1 id="title">Car Racing</h1>
+      <p>use w a s d for player1 and use up down for player2. the one hit the target first will be the winner</p>
+      <p>press space or enter to activate the game</p>
+      <p>please don't forget to click the canvas :)</p>
+      <input type="button" id="gameStart" value="Start" onclick="activateGame()">
+    </header>
+    <div class="scoreboard">
+      <p id="scoreBoard01">ScoreBoard</p>
+      <p id="scoreBoard02">ScoreBoard</p>
+    </div>
+    <div class="gameCanvas">
+      <canvas id="myCanvas" width=400px height=400px ></canvas>
+    </div>
+
+
+    <script src="jquery.js"></script>
+    <script src="h5utils.js"></script> <!-- for Canvas -->
+    <script src="http://bdcampbell.net/javascript/mousetrap.min.js"></script> <!-- mousetrap -->
+    <script type="text/javascript" src="behavior.js"></script>
+  </body>
+</html>
